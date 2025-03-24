@@ -6,6 +6,7 @@ import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
 import { Search } from 'lucide-react';
 import { Link, useLocation, useParams } from 'react-router';
+import { FaGithub } from "react-icons/fa6";
 
 import { getRootHref } from '@documenso/lib/utils/params';
 import { cn } from '@documenso/ui/lib/utils';
@@ -72,6 +73,19 @@ export const AppNavDesktop = ({
             {_(label)}
           </Link>
         ))}
+      </div>
+
+      <div className="relative group">
+        <Link to="https://github.com/atleaderdotcom/signDocs" target="_blank" rel="noopener noreferrer">
+          <Button variant={"link"} >
+            <FaGithub size={25} />
+          </Button>
+
+        </Link>
+        {/* Tooltip */}
+        <span className="absolute left-1/2 -bottom-10 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-gray-900 text-white text-xs rounded-md px-2 py-1">
+          Source Code
+        </span>
       </div>
 
       <Button

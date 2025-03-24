@@ -7,6 +7,7 @@ import { SignUpForm } from '~/components/forms/signup';
 import { appMetaTags } from '~/utils/meta';
 
 import type { Route } from './+types/signup';
+import { FaGithub } from 'react-icons/fa6';
 
 export function meta() {
   return appMetaTags('Sign Up');
@@ -33,6 +34,8 @@ export default function SignUp({ loaderData }: Route.ComponentProps) {
   const { isGoogleSSOEnabled, isOIDCSSOEnabled } = loaderData;
 
   return (
+
+
     <SignUpForm
       className="w-screen max-w-screen-2xl px-4 md:px-16 lg:-my-16"
       isGoogleSSOEnabled={isGoogleSSOEnabled}

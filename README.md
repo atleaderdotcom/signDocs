@@ -1,3 +1,19 @@
+## 📄 SignDocs@leader
+
+### 📝 Update Log
+
+#### ✏ Edited by: @leader
+#### 📅 Date: 24-04-2025
+
+**Changes made:**
+- 🔹 Updated `OPEN page layout(remix/app/routes/_unauthenticated+/_layout) file, navbar files`
+- 🔹 Removed Analatics `posthog-js, plausible-tracker`
+- 🔹 General code cleanup & optimization
+
+---
+
+✅ _Committed changes to the repository. Let me know if further improvements are needed._ 
+
 <img src="https://github.com/documenso/documenso/assets/13398220/a643571f-0239-46a6-a73e-6bef38d1228b" alt="Documenso Logo">
 
 <p align="center" style="margin-top: 20px">

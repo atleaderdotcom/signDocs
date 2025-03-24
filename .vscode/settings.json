@@ -16,6 +16,6 @@
     "editor.defaultFormatter": "Prisma.prisma"
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   }
 }

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-import Plausible from 'plausible-tracker';
+// import Plausible from 'plausible-tracker';
 import {
   Links,
   Meta,
@@ -10,7 +10,7 @@ import {
   data,
   isRouteErrorResponse,
   useLoaderData,
-  useLocation,
+  // useLocation,
 } from 'react-router';
 import { PreventFlashOnWrongTheme, ThemeProvider, useTheme } from 'remix-themes';
 
@@ -31,10 +31,10 @@ import { langCookie } from './storage/lang-cookie.server';
 import { themeSessionResolver } from './storage/theme-session.server';
 import { appMetaTags } from './utils/meta';
 
-const { trackPageview } = Plausible({
-  domain: 'documenso.com',
-  trackLocalhost: false,
-});
+// const { trackPageview } = Plausible({
+//   domain: 'documenso.com',
+//   trackLocalhost: false,
+// });
 
 export const links: Route.LinksFunction = () => [
   { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
@@ -106,13 +106,13 @@ export async function loader({ request }: Route.LoaderArgs) {
 export function Layout({ children }: { children: React.ReactNode }) {
   const { theme } = useLoaderData<typeof loader>() || {};
 
-  const location = useLocation();
+  // const location = useLocation();
 
-  useEffect(() => {
-    if (env('NODE_ENV') === 'production') {
-      trackPageview();
-    }
-  }, [location.pathname]);
+  // useEffect(() => {
+  //   if (env('NODE_ENV') === 'production') {
+  //     trackPageview();
+  //   }
+  // }, [location.pathname]);
 
   return (
     <ThemeProvider specifiedTheme={theme} themeAction="/api/theme">
@@ -149,7 +149,6 @@ export function LayoutContent({ children }: { children: React.ReactNode }) {
           <TooltipProvider>
             <TrpcProvider>
               {children}
-
               <Toaster />
             </TrpcProvider>
           </TooltipProvider>
