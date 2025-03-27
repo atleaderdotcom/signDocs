@@ -8,8 +8,7 @@ import type { TGetTeamsResponse } from '@documenso/lib/server-only/team/get-team
 import { getRootHref } from '@documenso/lib/utils/params';
 import { cn } from '@documenso/ui/lib/utils';
 
-import { BrandingLogo } from '~/components/general/branding-logo';
-
+// import { BrandingLogo } from '~/components/general/branding-logo';
 import { AppCommandMenu } from './app-command-menu';
 import { AppNavDesktop } from './app-nav-desktop';
 import { AppNavMobile } from './app-nav-mobile';
@@ -62,7 +61,12 @@ export const Header = ({ className, user, teams, ...props }: HeaderProps) => {
           to={`${getRootHref(params, { returnEmptyRootString: true })}/documents`}
           className="focus-visible:ring-ring ring-offset-background hidden rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 md:inline"
         >
-          <BrandingLogo className="h-6 w-auto" />
+          {/* <BrandingLogo className="h-6 w-auto" /> */}
+          <img
+            src="/static/atLeaderLogo.png"
+            className="img-fluid rounded-top h-20 w-[190px]"
+            alt="atLeaderLogo.png"
+          />
         </Link>
 
         <AppNavDesktop setIsCommandMenuOpen={setIsCommandMenuOpen} />

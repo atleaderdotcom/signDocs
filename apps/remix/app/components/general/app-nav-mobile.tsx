@@ -1,14 +1,14 @@
 import { msg } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
+import { FaGithub } from 'react-icons/fa6';
 import { Link, useParams } from 'react-router';
 
-import LogoImage from '@documenso/assets/logo.png';
+// import LogoImage from '@documenso/assets/logo.png';
 import { authClient } from '@documenso/auth/client';
 import { getRootHref } from '@documenso/lib/utils/params';
 import { Sheet, SheetContent } from '@documenso/ui/primitives/sheet';
 import { ThemeSwitcher } from '@documenso/ui/primitives/theme-switcher';
-import { FaGithub } from 'react-icons/fa6';
 
 export type AppNavMobileProps = {
   isMenuOpen: boolean;
@@ -49,12 +49,17 @@ export const AppNavMobile = ({ isMenuOpen, onMenuOpenChange }: AppNavMobileProps
     <Sheet open={isMenuOpen} onOpenChange={onMenuOpenChange}>
       <SheetContent className="flex w-full max-w-[350px] flex-col">
         <Link to="/" onClick={handleMenuItemClick}>
-          <img
+          {/* <img
             src={LogoImage}
             alt="Documenso Logo"
             className="dark:invert"
             width={170}
             height={25}
+          /> */}
+          <img
+            src="/static/atLeaderLogo.png"
+            className="img-fluid rounded-top h-20"
+            alt="atLeaderLogo.png"
           />
         </Link>
 
@@ -76,27 +81,28 @@ export const AppNavMobile = ({ isMenuOpen, onMenuOpenChange }: AppNavMobileProps
           >
             <Trans>Sign Out</Trans>
           </button>
-
         </div>
 
         <div className="mt-auto flex w-full flex-col space-y-4 self-end">
           <div className="w-fit">
-
             <ThemeSwitcher />
           </div>
           <div className=" ">
-            <Link className='flex justify-start items-center' to="https://github.com/atleaderdotcom/signDocs" target="_blank" rel="noopener noreferrer">
-              <FaGithub size={20} />&nbsp;Source&nbsp;Code
+            <Link
+              className="flex items-center justify-start"
+              to="https://github.com/atleaderdotcom/signDocs"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub size={20} />
+              &nbsp;Source&nbsp;Code
             </Link>
-
           </div>
 
           <p className="text-muted-foreground text-sm">
             © {new Date().getFullYear()} Documenso, Inc. <br /> All rights reserved.
           </p>
         </div>
-
-
       </SheetContent>
     </Sheet>
   );
