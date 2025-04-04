@@ -9,6 +9,7 @@ import { getRootHref } from '@documenso/lib/utils/params';
 import { Sheet, SheetContent } from '@documenso/ui/primitives/sheet';
 import { ThemeSwitcher } from '@documenso/ui/primitives/theme-switcher';
 import { FaGithub } from 'react-icons/fa6';
+import { env } from '@documenso/lib/utils/env';
 
 export type AppNavMobileProps = {
   isMenuOpen: boolean;
@@ -85,7 +86,7 @@ export const AppNavMobile = ({ isMenuOpen, onMenuOpenChange }: AppNavMobileProps
             <ThemeSwitcher />
           </div>
           <div className=" ">
-            <Link className='flex justify-start items-center' to="https://github.com/atleaderdotcom/signDocs" target="_blank" rel="noopener noreferrer">
+            <Link className='flex justify-start items-center' to={env("NEXT_PUBLIC_GITHUB_SHOW_URL") || ""} target="_blank" rel="noopener noreferrer">
               <FaGithub size={20} />&nbsp;Source&nbsp;Code
             </Link>
 

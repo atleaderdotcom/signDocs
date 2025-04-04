@@ -2,6 +2,7 @@ import { Outlet } from 'react-router';
 
 import backgroundPattern from '@documenso/assets/images/background-pattern.png';
 import { FaGithub } from 'react-icons/fa6';
+import { env } from '@documenso/lib/utils/env';
 
 export default function Layout() {
   return (
@@ -10,9 +11,9 @@ export default function Layout() {
         <h2 className="text-lg font-semibold mb-1">⚠ Important Notice</h2>
         <ul className="list-disc list-inside space-y-1 text-sm font-light">
           <li >The source code for this service is available (
-            <a href='https://github.com/atleaderdotcom/signDocs' target='_blank' className='hover:text-black' ><FaGithub className='inline' /></a>) to all users under the AGPL v3.</li>
-          <li>This service is licensed under the GNU Affero General Public License v3 - <a href='https://github.com/atleaderdotcom/signDocs?tab=AGPL-3.0-1-ov-file#readme' target='_blank' className='hover:text-black' ><FaGithub className='inline' /></a>.</li>
-          <li>&copy; and licensing notices are included in the source code and can be viewed in the 'README.md' file on <a href='https://github.com/atleaderdotcom/signDocs?tab=readme-ov-file#readme' target='_blank' className='hover:text-black' ><FaGithub className='inline' /></a></li>
+            <a href={env("NEXT_PUBLIC_GITHUB_SHOW_URL")} target='_blank' className='hover:text-black' ><FaGithub className='inline' /></a>) to all users under the AGPL v3.</li>
+          <li>This service is licensed under the GNU Affero General Public License v3 - <a href={env("NEXT_PUBLIC_GITHUB_SHOW_URL") + '?tab=AGPL-3.0-1-ov-file#readme'} target='_blank' className='hover:text-black' ><FaGithub className='inline' /></a>.</li>
+          <li>&copy; and licensing notices are included in the source code and can be viewed in the 'README.md' file on <a href={env("NEXT_PUBLIC_GITHUB_SHOW_URL") + '?tab=readme-ov-file#readme'} target='_blank' className='hover:text-black' ><FaGithub className='inline' /></a></li>
           <li>We impose no additional restrictions beyond the terms of the <strong>AGPL v3.</strong></li>
           <li>This service remains fully open-source and is not proprietary.</li>
           <li>Original &copy; for Documenso is held by its contributors. Our modifications are licensed under AGPL v3.</li>

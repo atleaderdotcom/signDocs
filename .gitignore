@@ -50,3 +50,10 @@ yarn-error.log*
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+
+# tar files
+*.tar.xz
+
+certificate.crt
+private.key
