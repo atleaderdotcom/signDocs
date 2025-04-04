@@ -111,7 +111,9 @@ msgid "{0, plural, zero {Select values} other {# selected...}}"
 msgstr "{0, plural, zero {Werte auswählen} other {# ausgewählt...}}"
 
 #. placeholder {0}: _(FRIENDLY_FIELD_TYPE[fieldType as FieldType])
+#. placeholder {0}: error.message
 #: apps/remix/app/components/general/document-signing/document-signing-auto-sign.tsx
+#: apps/remix/app/components/forms/signin.tsx
 msgid "{0}"
 msgstr "{0}"
 

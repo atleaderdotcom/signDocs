@@ -47,7 +47,6 @@ const CommonErrorMessages: Record<string, MessageDescriptor> = {
 
 const handleFallbackErrorMessages = (code: string) => {
   const message = CommonErrorMessages[code];
-console.log(code)
   if (!message) {
     return msg`An unknown error occurred`;
   }
@@ -244,6 +243,10 @@ export const SignInForm = ({
         .with(
           AuthenticationErrorCode.InvalidTwoFactorCode,
           () => msg`The two-factor authentication code provided is incorrect`,
+        )
+        .with(
+          AuthenticationErrorCode.custom,
+          () => msg`${error.message}`
         )
         .otherwise(() => handleFallbackErrorMessages(error.code));
 
