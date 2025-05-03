@@ -30,6 +30,8 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+.env.development
+.env.production
 
 # turbo
 .turbo
@@ -50,3 +52,10 @@ yarn-error.log*
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+
+# tar files
+*.tar.xz
+
+certificate.crt
+private.key

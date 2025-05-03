@@ -11,6 +11,7 @@ import { FaGithub } from "react-icons/fa6";
 import { getRootHref } from '@documenso/lib/utils/params';
 import { cn } from '@documenso/ui/lib/utils';
 import { Button } from '@documenso/ui/primitives/button';
+import { env } from '@documenso/lib/utils/env';
 
 const navigationLinks = [
   {
@@ -76,7 +77,7 @@ export const AppNavDesktop = ({
       </div>
 
       <div className="relative group">
-        <Link to="https://github.com/atleaderdotcom/signDocs" target="_blank" rel="noopener noreferrer">
+        <Link to={env("NEXT_PUBLIC_GITHUB_SHOW_URL") || ""} target="_blank" rel="noopener noreferrer">
           <Button variant={"link"} >
             <FaGithub size={25} />
           </Button>

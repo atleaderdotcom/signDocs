@@ -5,6 +5,7 @@ import { IoClose } from 'react-icons/io5';
 import { Outlet } from 'react-router';
 
 import backgroundPattern from '@documenso/assets/images/background-pattern.png';
+import { env } from '@documenso/lib/utils/env';
 
 export default function Layout() {
   const [noticeBox, setNoticeBox] = useState(true);
