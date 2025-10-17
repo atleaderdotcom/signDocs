@@ -100,7 +100,7 @@ export default function Layout() {
           <a href="https://documenso.com/" className="text-documenso-700" target="_blank">
             Documenso
           </a>{' '}
-          – keeping it open-source and accessible for all{' '}
+          – keeping it open-source and access ible for all{' '}
           <a href="https://github.com/atleaderdotcom/signDocs" target="_blank">
             <FaGithub className="inline" />
           </a>
